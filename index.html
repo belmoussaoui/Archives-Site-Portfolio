@@ -12,10 +12,12 @@
     <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
     <!-- css -->
     <link rel="stylesheet" href="./public/css/style.css">
+    <link rel="icon" href="./public/img/icon.png" />
 </head>
-<body>  
+<body>
     <!-- header -->    
     <header class="masthead">
+        <canvas id="canvas" style="position:absolute; width:100%; height:100vh"></canvas>
         <div class="container-fluid h-100">
             <div class="row h-100 align-items-center position-relative">
                 <nav class="navbar navbar-expand-lg fixed-top navbar-expand-md p-3">
@@ -33,9 +35,6 @@
                             </li>
                             <li class="nav-item mx-2">
                                 <a class="nav-link" href="#">Portfolio</a>
-                            </li>
-                            <li class="nav-item mx-2">
-                                <a class="nav-link" href="#">Services</a>
                             </li>
                         </ul>
                     </div>
@@ -62,7 +61,7 @@
     <!-- about -->
     <section id="portfolio" style="background-color: #EEEEFF;">
         <div class="container">
-            <h2 class="title-section mb-0 ml-5">Quelques mots à <span class="text-important">propos de moi</span>.</h2>
+            <h2 class="title-section mb-0 ml-5">-Quelques mots à <span class="text-important">propos de moi</span>.</h2>
             <div class="row m-5">
                 <div class="col-6 col-about">
                     <h3 class="text-center">Qui suis-je?</h3>
@@ -79,14 +78,14 @@
                     
                 </div>
                 <div class="container col-6 image-set">
-                    <img src="./public/img/unity.png" alt="" style="width:160px; left:300px; position:absolute; top:25px">
-                    <img src="./public/img/phaser.png" alt="" style="width:110px; left:75px; position:absolute;top:15px">
-                    <img src="./public/img/sdl.png" alt="" style="width:120px; left:220px; position:absolute; top:110px">
-                    <img src="./public/img/monogame.png" alt="" style="width:100px; left:400px; position:absolute;top:100px">
-                    <img src="./public/img/love2d.png" alt="" style="width:140px; left:25px; position:absolute;top:130px">
-                    <img src="./public/img/sfml.png" alt="" style="width:160px; left:150px; position:absolute;top:200px">
-                    <img src="./public/img/rmmv.png" alt="" style="width:100px; left:350px; position:absolute; top:215px">
-                    <img src="./public/img/pygame.png" alt="" style="width:150px; left:75px; position:absolute;top:275px">
+                    <img src="./public/img/unity.png" alt="" style="width:160px; left:290px; position:absolute; top:25px">
+                    <img src="./public/img/phaser.png" alt="" style="width:110px; left:65px; position:absolute;top:15px">
+                    <img src="./public/img/sdl.png" alt="" style="width:120px; left:210px; position:absolute; top:110px">
+                    <img src="./public/img/monogame.png" alt="" style="width:100px; left:390px; position:absolute;top:100px">
+                    <img src="./public/img/love2d.png" alt="" style="width:140px; left:15px; position:absolute;top:130px">
+                    <img src="./public/img/sfml.png" alt="" style="width:160px; left:140px; position:absolute;top:200px">
+                    <img src="./public/img/rmmv.png" alt="" style="width:100px; left:330px; position:absolute; top:215px">
+                    <img src="./public/img/pygame.png" alt="" style="width:150px; left:65px; position:absolute;top:275px">
                 </div>
             </row>
         </div>
@@ -95,7 +94,7 @@
     <!-- portfolio -->
     <section id="portfolio">
         <div class="container">
-            <h2 class="title-section text-center">Voici <span class="text-important">certains projets</span><br>sur lesquels j'ai travaillé</h2>
+            <h2 class="title-section text-center">-Voici <span class="text-important">certains projets</span><br>sur lesquels j'ai travaillé.</h2>
             
             <!-- zelda 2 recode -->
             <div class="card text-light m-5">
@@ -137,8 +136,7 @@
     
 
     <!-- js -->
-    <script>
-    </script>
+    <script src="public/js/canvas.js"></script>
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx" crossorigin="anonymous"></script>
 
