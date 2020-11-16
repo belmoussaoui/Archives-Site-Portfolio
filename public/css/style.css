@@ -147,3 +147,13 @@ h3 {
 .page-footer {
     background-color: #32324c;
 }
+
+.a-git {
+    color: #B5B682;
+    font-weight: bold;
+    float: right;
+}
+
+a:hover {
+    color: #06AED5;
+  }
