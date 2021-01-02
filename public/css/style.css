@@ -175,3 +175,25 @@ a:hover {
 .btn-social:hover {
     color: #06AED5;
 }
+
+.progress {
+    margin-bottom: 10px;
+    height: 20px;
+    /* border: solid 1px black; */
+    border-radius: 0px;
+}
+
+.icon-skill {
+    height: 48px;
+    position: relative;
+    z-index: 10;
+}
+
+.progress-skill {
+    background-color: #E5446D; /* gold; */
+}
+
+.skill-rank {
+    font-size: 27px;
+    font-weight: bold;
+}
