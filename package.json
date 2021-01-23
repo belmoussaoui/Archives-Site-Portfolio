@@ -1,0 +1,23 @@
+{
+  "name": "Site-Portfolio",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/belmoussaoui/site-portfolio.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/belmoussaoui/site-portfolio/issues"
+  },
+  "homepage": "https://github.com/belmoussaoui/site-portfolio#readme",
+  "dependencies": {
+    "zdog": "^1.1.2"
+  }
+}

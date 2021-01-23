@@ -9,7 +9,8 @@ html {
 }
 
 .navbar {
-    background: #32324CDE;
+    /* background: #32324CDE; */
+    background-color: rgba(0,0,0, 0);
     font-family: "Raleway";
 }
 
