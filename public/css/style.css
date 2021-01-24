@@ -5,12 +5,13 @@ html {
 .masthead {
     height: 100vh;
     min-height: 500px;
-    background-color: #32324c;
+    background-color: #FDB;
 }
 
 .navbar {
+    top: 0;
     /* background: #32324CDE; */
-    background-color: rgba(0,0,0, 0);
+    background-color: rgba(0,0,0,0);
     font-family: "Raleway";
 }
 

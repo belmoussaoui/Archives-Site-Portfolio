@@ -34,7 +34,7 @@ var cloud = new Zdog.Ellipse({
 
 var cloud1 = new Zdog.Anchor({
     addTo: scene,
-    translate: { x: 5, y: -8, z: -5 },
+    translate: { x: 5, y: -16, z: -5 },
     rotate: { y: Math.PI / 12}
 });
 
@@ -76,7 +76,7 @@ new Zdog.Shape({
 
 let cloud2 = new Zdog.Anchor({
     addTo: scene,
-    translate: { x: -10, y: -12, z: -10 },
+    translate: { x: -10, y: -20, z: -10 },
     rotate: { y: -Math.PI / 12}
 });
 
@@ -124,6 +124,54 @@ new Zdog.Shape({
 });
 
 // windmill
+
+
+Zfont.init(Zdog);
+// Set up a font to use
+let myFont = new Zdog.Font({
+    src: 'public/fonts/Raleway-SemiBold.ttf'
+});
+
+// Create a text object
+// This is just a Zdog.Shape object with a couple of extra parameters!
+new Zdog.Text({
+    addTo: scene,
+    font: myFont,
+    translate: { x: -23 },
+    value: 'BILAL',
+    fontSize: 6,
+    color: '#E5446D',
+    textAlign: 'center',
+    fill: true,
+    stroke: 0,
+    rotate: { }
+});
+
+new Zdog.Text({
+    addTo: scene,
+    font: myFont,
+    value: 'EL MOUSSAOUI',
+    fontSize: 6,
+    color: '#32324c',
+    textAlign: 'center',
+    fill: true,
+    stroke: 0,
+    rotate: { },
+    translate: { x: 10 }
+});
+
+new Zdog.Text({
+    addTo: scene,
+    font: myFont,
+    value: 'Game developer\nWeb developer',
+    fontSize: 2.5,
+    color: '#000',
+    textAlign: 'center',
+    fill: true,
+    stroke: 0,
+    translate: { y: 8, z: 2 }
+});
+
 
 
 
