@@ -152,7 +152,7 @@ new Zdog.Text({
     font: myFont,
     value: 'EL MOUSSAOUI',
     fontSize: 6,
-    color: '#32324c',
+    color: '#fff',
     textAlign: 'center',
     fill: true,
     stroke: 0,
@@ -171,6 +171,55 @@ new Zdog.Text({
     stroke: 0,
     translate: { y: 8, z: 2 }
 });
+
+// moon
+// let moon = new Zdog.Group({
+//     addTo: scene
+// })
+
+// new Zdog.Shape({
+//     addTo: moon,
+//     color: "rgba(18, 47, 80, 0.4)",
+//     fill: true,
+//     stroke: 20,
+//     translate: {z:-30}
+// });
+
+// new Zdog.Shape({
+//     addTo: moon,
+//     stroke: 0,
+//     stroke: 15,
+//     fill: true,
+//     color: "#122F50",
+//     translate: {z:-30}
+// });
+
+
+
+// stars
+
+var stars = [];
+for (let i = 0; i < 50; i++) {
+    star = new Zdog.Rect({
+        addTo: scene,
+        stroke: 0,
+        fill: true,
+        width: 1,
+        height: 1,
+        scale: {x: 0.5, y: 0.5},
+        color: white,
+        translate : {z:11, x:10, y:-7},
+        rotate: {z:TAU/8}
+    
+    });
+    star.translate.x = (Math.random() * 100) - 50;
+    star.translate.y = (Math.random() * 100) - 50
+    star.translate.z = (Math.random() * 20) - 20
+    star.count = Math.floor(-Math.random()*50);
+    star.signStar = 1;
+    star.scale = {x:0, y:0};
+    stars.push(star);
+}
 
 
 
@@ -193,14 +242,30 @@ function loop() {
 
 	ctx.clearRect( 0, 0, w, h );
 	ctx.save();
-	ctx.fillStyle = "#FDB";
+	ctx.fillStyle = "#2e4482";
 	ctx.fillRect(0, 0, w, h);
 	ctx.translate( w/2, h/2 );
 	ctx.scale( 10, 10 );
 	// set lineJoin and lineCap to round
 	ctx.lineJoin = 'round';
 	ctx.lineCap = 'round';
-	// render scene graph
+    // render scene graph
+    stars.forEach(star => {
+        star.count++;
+        if (star.count >= 0) {
+            if (star.scale.x > 1 || star.scale.x <= 0) {
+                star.signStar *= -1
+            }
+            star.scale.x += 0.02 * star.signStar;
+            star.scale.x = Math.max(0, star.scale.x);
+            star.scale.y = star.scale.x;
+        }
+        if (star.scale.x === 0) {
+            star.count = Math.floor(-Math.random()*200);
+        }
+    });
+
+
 	scene.renderGraphCanvas(ctx);
 	ctx.restore();
 	requestAnimationFrame(loop);
