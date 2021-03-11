@@ -271,6 +271,203 @@ function loop() {
 	requestAnimationFrame(loop);
 }
 
+// gamecube
+
+let cube = new Zdog.Box({
+    addTo: scene,
+    width: 15,
+    height: 10,
+    depth: 15,
+    stroke: false,
+    color: '#4B0082', // default face color
+    leftFace: '#3B0072',
+    rightFace: false,
+    topFace: '#5C1193',
+    bottomFace: '#3A0071',
+    topFace: false,
+    frontFace: false,
+    translate: { z: 0, y: 20 },
+});
+
+var topFace = new Zdog.Group({
+    addTo: scene,
+    translate: { z: 0, y: -10 / 2 + 20 },
+    rotate: { x: TAU / 4 }
+});
+
+new Zdog.Rect({
+    addTo: topFace,
+    width: 15,
+    color: '#5C1193',
+    height: 15,
+    stroke: 0,
+    fill: true,
+});
+
+new Zdog.Ellipse({
+    addTo: topFace,
+    width: 8,
+    height: 8,
+    stroke: 0,
+    fill: true,
+});
+
+// Set up a font to use
+let myFont2 = new Zdog.Font({
+    src: 'public/fonts/Raleway-Regular.ttf'
+});
+
+new Zdog.Text({
+    addTo: topFace,
+    font: myFont2,
+    value: 'Nintendo\nGamecube',
+    fontSize: 0.7,
+    color: '#fff',
+    textAlign: 'center',
+    fill: true,
+    stroke: 0,
+});
+
+
+new Zdog.Ellipse({
+    addTo: topFace,
+    width: 1.5,
+    height: 1.5,
+    color: '#fff',
+    stroke: 0,
+    fill: true,
+    translate: { x: -6, y: -5},
+});
+
+new Zdog.Shape({
+    addTo: topFace,
+    path: [
+        { x: -6, y: -7.5 + 0.05 },
+        { x: -6, y: -6 },
+        {
+            arc: [
+                { x: -5, y: -6 }, // corner
+                { x: -5, y: -5 }, // end point
+            ]
+        },
+        {
+            arc: [
+                { x: -5, y: -4 }, // corner
+                { x: -6, y: -4 }, // end point
+            ]
+        },
+        { x: -6, y: 5 },
+        {
+            arc: [
+                { x: 0, y: 7 }, // corner
+                { x: 6, y: 5 }, // end point
+            ]
+        },
+        { x: 6, y: -7.5 + 0.05 }, // line to 2nd point
+    ],
+    stroke: 0.05,
+    closed: false,
+
+    color: '#000',
+});
+
+new Zdog.Shape({
+    addTo: topFace,
+    path: [
+        { x: -2, y: 5.8 },
+        {arc: [
+            { x: 0, y:  7.5}, // corner
+            { x: 2, y: 5.8 }, // end point
+        ]},
+        
+    ],
+    stroke: 0.05,
+    closed: false,
+    fill: true,
+
+    color: '#000',
+});
+
+var frontFace = new Zdog.Group({
+    addTo: scene,
+    translate: { z: 15 / 2, y: 0 + 20 },
+    rotate: {}
+});
+
+new Zdog.Rect({
+    addTo: frontFace,
+    width: 15,
+    color: '#4B0082',
+    height: 10,
+    stroke: 0,
+    fill: true,
+});
+
+new Zdog.Rect({
+    addTo: frontFace,
+    width: 10,
+    color: "#fff",
+    height: 5,
+    fill: true,
+
+});
+
+for (let i = 0; i < 4; i++) {
+    new Zdog.Ellipse({
+        addTo: frontFace,
+        width: 1,
+        color: '#000',
+        height: 1,
+        stroke: 0,
+        fill: true,
+        translate: {x: -3 + i * 2, z:0.5}
+    });
+}
+
+let semicircle = new Zdog.Ellipse({
+    addTo: scene,
+    width: 5,
+    height: 10,
+    quarters: 2,
+    stroke: 1.5,
+    color: '#000',
+    translate: {z:-7.5, y:-2 + 20},
+    rotate: {x:-TAU/4, z:TAU/4}
+});
+
+var rightFace = new Zdog.Group({
+    addTo: scene,
+    translate: { z: 0, x:7.5, y:-0.2+20 },
+    rotate: { y:TAU/4 }
+});
+
+new Zdog.Rect({
+    addTo: rightFace,
+    width: 15,
+    color: '#4B0082',
+    height: 10,
+    stroke: 0,
+    fill: true,
+    translate: {y:0.2}
+});
+
+for (let i = 0; i < 8; i++) {
+    for (let j = 0; j < 8; j++) {
+        new Zdog.Rect({
+            addTo: rightFace,
+            width: 0.5,
+            height: 0.5,
+            quarters: 2,
+            stroke: 0,
+            fill: true,
+            color: '#000',
+            translate: {x: -3 + 0.8 * i, y: -3 + j * 0.8},
+            rotate: {}
+        });
+
+    }
+}
+
 
 
 // start animation
