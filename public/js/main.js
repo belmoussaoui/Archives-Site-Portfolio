@@ -17,7 +17,8 @@ var signCloud1 = 1;
 var signCloud2 = -1;
 
 let scene = new Zdog.Anchor({
-	zoom: 10
+    zoom: 10,
+    rotate: {x:-Math.PI/8, y: Math.PI/4}
 });
 
 var cloud = new Zdog.Ellipse({
@@ -137,14 +138,15 @@ let myFont = new Zdog.Font({
 new Zdog.Text({
     addTo: scene,
     font: myFont,
-    translate: { x: -23 },
+    rotate: {y: -Math.PI/4},
+    //translate: { x: -23 },
     value: 'BILAL',
+    translate: { y: -7},
     fontSize: 6,
     color: '#E5446D',
     textAlign: 'center',
     fill: true,
     stroke: 0,
-    rotate: { }
 });
 
 new Zdog.Text({
@@ -156,8 +158,8 @@ new Zdog.Text({
     textAlign: 'center',
     fill: true,
     stroke: 0,
-    rotate: { },
-    translate: { x: 10 }
+    rotate: {y: -Math.PI/4},
+    translate: { y: -1 },
 });
 
 new Zdog.Text({
@@ -169,7 +171,8 @@ new Zdog.Text({
     textAlign: 'center',
     fill: true,
     stroke: 0,
-    translate: { y: 8, z: 2 }
+    translate: { y: 7, z: 2 },
+    rotate: {y: -Math.PI/4}
 });
 
 // moon
@@ -464,7 +467,6 @@ for (let i = 0; i < 8; i++) {
             translate: {x: -3 + 0.8 * i, y: -3 + j * 0.8},
             rotate: {}
         });
-
     }
 }
 
