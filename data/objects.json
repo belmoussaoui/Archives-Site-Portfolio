@@ -1,0 +1,23 @@
+[
+    { "id": 0, "name": "", "description": "" },
+    {
+        "id": 1,
+        "name": "Big N",
+        "description": "Mon premier model 3D qui est une reporduction du logo de la nintendo 64!"
+    },
+    {
+        "id": 2,
+        "name": "Histoire des Codes Secrets [Simon Singh]",
+        "description": "Un super livre qui m'a introduit dans l'informatique!"
+    },
+    {
+        "id": 3,
+        "name": "Baten Kaitos 2005",
+        "description": "Le meilleur jeu du monde!"
+    },
+    {
+        "id": 4,
+        "name": "The Honorary Title",
+        "description": "Mon groupe de musique préféré!"
+    }
+]
